@@ -1,26 +1,26 @@
 require("rspec")
-require("roman_numerals")
+require("nth_prime")
 
-describe("roman_numerals") do
+describe("nth_prime") do
 
-  it("returns the input number in Roman numerals - single Roman numerals") do
-    roman_numerals(1).should(eq("I"))
+  it("returns the nth prime") do
+    nth_prime(1).should(eq(2))
   end
 
-  it("returns the input number in Roman numerals - multiple Roman numerals") do
-    roman_numerals(2).should(eq("II"))
+  it("returns the nth prime") do
+    nth_prime(2).should(eq(3))
   end
 
-  it("returns the input number in Roman numerals - subtractive Roman numerals") do
-    roman_numerals(4).should(eq("IV"))
+  it("returns the nth prime") do
+    nth_prime(10).should(eq(29))
   end
 
-  it("returns the input number in Roman numerals - multiple orders of magnitude") do
-    roman_numerals(254).should(eq("CCLIV"))
+  it("returns the nth prime") do
+    nth_prime(23).should(eq(83))
   end
 
-  it("returns the input number in Roman numerals - largest possible number") do
-    roman_numerals(3999).should(eq("MMMCMXCIX"))
+  it("returns the nth prime") do
+    nth_prime(200).should(eq(1223))
   end
 
 end
